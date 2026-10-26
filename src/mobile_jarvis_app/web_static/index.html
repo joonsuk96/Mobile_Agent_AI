@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#080d14"><title>JARVIS — Personal AI Command Center</title><link rel="stylesheet" href="/assets/style.css"><script src="/assets/app.js" defer></script></head>
+<body>
+<svg class="icon-defs" aria-hidden="true"><defs><symbol id="spark" viewBox="0 0 24 24"><path d="m12 2 2.7 7.3L22 12l-7.3 2.7L12 22l-2.7-7.3L2 12l7.3-2.7Z"/></symbol><symbol id="arrow" viewBox="0 0 24 24"><path d="M12 19V5m-6 6 6-6 6 6"/></symbol><symbol id="pulse" viewBox="0 0 24 24"><path d="M2 12h5l3-8 4 16 3-8h5"/></symbol><symbol id="chat" viewBox="0 0 24 24"><path d="M20 11a8 8 0 0 1-8 8H4l1.5-4A8 8 0 1 1 20 11Z"/><path d="M8 10h8m-8 4h5"/></symbol></defs></svg>
+<aside class="sidebar">
+<a class="brand" href="/" aria-label="자비스 홈"><span class="brand-mark">J<span>·</span></span><div>JARVIS<small>PERSONAL INTELLIGENCE</small></div></a>
+<button id="new-chat" class="new-chat"><span>＋</span> 새 대화 <kbd>NEW</kbd></button>
+<p class="nav-label">WORKSPACE</p><div class="nav-item selected"><svg><use href="#chat"/></svg> 커맨드 센터 <span class="tiny-dot"></span></div>
+<div class="sidebar-note"><span class="note-line"></span><p>생각은 당신이.<br>실행은 자비스가.</p><small>YOUR INTENT. MY MISSION.</small></div>
+<div class="session-card"><span class="mini-orbit">✧</span><div>Personal workspace<small>대화 기억 · 서버 세션 동안 유지</small></div><span class="lock">⌘</span></div>
+</aside>
+<main>
+<header class="topbar"><div><span class="breadcrumb">WORKSPACE</span><span class="slash">/</span> Command center</div><div id="server-badge" class="connection"><i></i><span>서버 연결 중</span></div></header>
+<div class="content">
+<section class="intro"><div><div class="eyebrow"><span></span> YOUR PERSONAL AI AGENT</div><h1>명령을 넘어,<br><span>행동하는 인텔리전스.</span></h1><p>당신의 의도를 이해하고, 다음 행동을 찾아갑니다.</p></div><div class="session-label"><span>COMMAND CENTER</span><strong>01 <em>/ LOCAL</em></strong></div></section>
+<div class="workspace">
+<section class="console">
+<div class="stage" id="stage"><div class="stage-grid"></div><div class="stage-heading"><span><i></i> JARVIS CORE</span><span id="core-status">STANDBY</span></div>
+<div class="hologram" role="img" aria-label="푸른빛으로 빛나는 자비스 에이전트 홀로그램">
+<svg class="agent-art" viewBox="0 0 600 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+<defs><linearGradient id="metal" x1="220" y1="70" x2="380" y2="300" gradientUnits="userSpaceOnUse"><stop stop-color="#1d5364"/><stop offset=".45" stop-color="#0c2333"/><stop offset="1" stop-color="#163f50"/></linearGradient><linearGradient id="edge" x1="230" y1="80" x2="370" y2="270"><stop stop-color="#a3f9ff"/><stop offset=".4" stop-color="#32c6da"/><stop offset="1" stop-color="#153642"/></linearGradient><radialGradient id="halo"><stop stop-color="#1cbacc" stop-opacity=".18"/><stop offset="1" stop-color="#1cbacc" stop-opacity="0"/></radialGradient><filter id="glow"><feGaussianBlur stdDeviation="3"/></filter><pattern id="scan" width="4" height="5" patternUnits="userSpaceOnUse"><path d="M0 0h4" stroke="#8af6ff" stroke-opacity=".07"/></pattern></defs>
+<ellipse cx="300" cy="190" rx="210" ry="150" fill="url(#halo)"/>
+<g class="orbit"><ellipse cx="300" cy="190" rx="172" ry="138" stroke="#39b8c7" stroke-opacity=".12"/><ellipse cx="300" cy="190" rx="158" ry="126" stroke="#39b8c7" stroke-opacity=".23" stroke-dasharray="3 9"/><path d="M146 137a170 138 0 0 1 68-63M388 72a170 138 0 0 1 67 68M149 251a170 138 0 0 0 65 60M387 309a170 138 0 0 0 67-65" stroke="#63e7ed" stroke-opacity=".65" stroke-width="2"/></g>
+<path d="M255 87 279 74h42l25 13 24 43-3 82-22 48-29 24h-32l-29-24-22-48-3-82 25-43Z" fill="url(#metal)" stroke="url(#edge)" stroke-width="1.4"/>
+<path d="m255 87 13 47-14 23-21-27m113-43-14 47 14 23 24-27M268 134h64l-10 27h-44l-10-27Z" stroke="#7de8ed" stroke-opacity=".55"/>
+<path d="m254 157 24 19h44l24-19 15 47-24 40-14 26h-46l-14-26-24-40 15-47Z" fill="#0b1a26" stroke="#417786"/>
+<path d="m247 175 36 9-6 11-25-4-5-16Zm106 0-36 9 6 11 25-4 5-16Z" fill="#91f6ff" filter="url(#glow)"/>
+<path d="m247 175 36 9-6 8-25-4-5-13Zm106 0-36 9 6 8 25-4 5-13Z" fill="#c3ffff"/>
+<path d="m283 176 7 32-12 26h44l-12-26 7-32M277 244h46l-8 13h-30l-8-13Z" stroke="#498999"/><path d="M299 88v37M246 210l19 12m89-12-19 12" stroke="#53cbd7" stroke-opacity=".6"/>
+<path d="m255 87 24-13h42l25 13 24 43-3 82-22 48-29 24h-32l-29-24-22-48-3-82 25-43Z" fill="url(#scan)"/>
+<path d="M245 268 213 287l-30 24m172-43 32 19 30 24" stroke="#4c9ba7" stroke-opacity=".6"/><path d="M171 316h258" stroke="#58dee9" stroke-opacity=".2"/>
+<g stroke="#42a8b5" stroke-opacity=".4"><path d="M105 174h78l25 18h22M369 205h33l22-24h76M272 52V38h56v14"/><circle cx="105" cy="174" r="3"/><circle cx="500" cy="181" r="3"/></g>
+<g fill="#71b5bf" font-family="monospace" font-size="8" letter-spacing="2"><text x="84" y="163">COGNITIVE ENGINE</text><text x="427" y="170">ACTION LINK</text><text x="263" y="341">J.A.R.V.I.S.</text></g>
+</svg></div>
+<div class="stage-bottom"><div class="wave"><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b></div><span id="stage-message">준비됐어요. 무엇을 도와드릴까요?</span><span class="mode-label">AUTONOMOUS</span></div></div>
+<div class="chat-area" id="chat-area" role="log" aria-live="polite"><div class="welcome" id="welcome"><span class="assistant-avatar">✧</span><div><span class="message-name">JARVIS <small>YOUR AI COPILOT</small></span><p>안녕하세요. 자비스입니다.<br>폰에서 하고 싶은 일을 알려주세요.</p></div></div></div>
+<div class="suggestions" id="suggestions"><button data-prompt="유튜브 앱 열어줘"><span>↗</span> 유튜브 열기</button><button data-prompt="삼성 인터넷에서 오늘 날씨 검색해줘"><span>⌕</span> 오늘 날씨 검색</button><button data-prompt="버스타고 앱 열어줘"><span>↗</span> 버스타고 실행</button></div>
+<form class="composer" id="command-form"><label class="sr-only" for="command">자비스에게 명령하기</label><div class="composer-top"><span id="input-mode">COMMAND INPUT</span><span>ENTER ↵ 전송 · SHIFT + ENTER 줄바꿈</span></div><div class="composer-row"><textarea id="command" rows="2" placeholder="자비스, 유튜브에서 좋아하는 음악 틀어줘…" maxlength="8000" required></textarea><button id="send" class="send" type="submit" aria-label="명령 실행"><svg><use href="#arrow"/></svg></button></div><div class="composer-footer"><span><i></i> 기존 에이전트와 연결</span><button type="button" id="cancel" disabled><span>■</span> 실행 중단</button></div></form>
+<p class="footnote">폰 잠금을 해제하고 ADB를 연결해 주세요. 실행 중에는 폰을 직접 조작하지 마세요.</p>
+</section>
+<aside class="activity-panel"><div class="activity-header"><div><svg><use href="#pulse"/></svg> LIVE ACTIVITY</div><span id="event-count">00</span></div><div class="mission-status"><span class="status-orb" id="status-orb"></span><div><small>CURRENT STATUS</small><strong id="task-status">명령 대기 중</strong></div><span class="live-tag" id="live-tag">IDLE</span></div><div class="activity-label">EXECUTION TIMELINE <span id="elapsed">00:00</span></div><div class="activity-log" id="activity-log" role="log" aria-label="실행 로그"><div class="empty-log"><span>⌁</span><p>모든 행동이 여기에 기록됩니다.</p><small>명령을 보내면 실시간으로 표시돼요.</small></div></div><div class="connection-note"><i></i><div>LOCAL CONNECTION<small>웹 → Python 에이전트 → ADB → 폰</small><small>폰 연결 상태는 작업 시작 시 확인해요.</small></div></div></aside>
+</div><footer><span>JARVIS / PERSONAL AI COMMAND CENTER</span><span>BUILT TO ACT. DESIGNED FOR YOU.</span></footer>
+</div></main><div id="toast" role="alert" hidden></div>
+</body></html>

@@ -1,0 +1,54 @@
+# Local secrets (keep the shareable template)
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Python-generated files
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+build/
+dist/
+wheels/
+*.egg-info/
+
+# Local environments and package caches
+.venv/
+venv/
+env/
+.uv-cache/
+uv-cache/
+
+# Phone-specific app metadata and learned aliases
+.jarvis-cache/
+
+# Runtime logs, temporary files and backups
+*.log
+*.tmp
+*.temp
+*.bak
+*.orig
+*.rej
+
+# Editor and OS-local files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Device packages and private recordings
+*.apk
+*.aab
+*.jks
+*.keystore
